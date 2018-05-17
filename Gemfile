@@ -30,16 +30,13 @@ gem 'bcrypt', '~> 3.1.7'
 gem "clearance"
 
 # include bootstrap
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.1.0'
 
 #include fontawesome
 gem 'font-awesome-rails'
 
 #include jquery & jquery ujs
 gem 'jquery-rails'
-
-#to protect authorizations
-gem 'figaro'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
