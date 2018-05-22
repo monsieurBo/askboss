@@ -4,17 +4,17 @@
 	<title>AskBoss - <%= @note.name %></title>
 </head>
 <body>
+	<%= @note.name %><br>
+	<% count=0%>
+	<% @note.libraries.each do|f|%>
+		<a href ="<%= f %>"><%= @note['libraries'][count]%></a><==
+		<%= link_to "Delete File", libdel_path(@note.id,count), method: :delete%><br>
+		<%count+=1%>
+	<% end%>
+	<br>
+
+	<%=link_to "Edit", edit_note_path%><br>
+	<%=link_to "All notes", notes_path%>
 
 </body>
 </html>
-<%= @note.name %><br>
-<% count=0%>
-<% @note.libraries.each do|f|%>
-<a href ="<%= f %>"><%= @note['libraries'][count]%></a><==
-<%= link_to "Delete File", libdel_path(@note.id,count), method: :delete%><br>
-<%count+=1%>
-<% end%>
-<br>
-
-<%=link_to "Edit", edit_note_path%><br>
-<%=link_to "All notes", notes_path%>
